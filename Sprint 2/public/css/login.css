@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen&display=swap');
+body {
+    background-color: #533483;
+    font-family: 'Silkscreen', cursive;
+}
+p {
+    font-family: helvetica;
+    font-style: italic;
+}
+main {
+    width: 100%;
+    padding: 20px;
+    margin: auto;
+    margin-top: 100px;
+}
+.container-all {
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    position: relative;
+}
+.box-back{
+    width: 100%;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    backdrop-filter: blur(10px);
+    background-color: rgba(15, 52, 96, 0.5);
+}
+.box-back div {
+    margin: 100px 40px;
+    color: white;
+    transition: all 500ms;
+}
+.box-back .box-back-register {
+    padding-left: 70px;
+    text-align: center;
+}
+.box-back .box-back-login {
+    text-align: center;
+}
+.box-back div p, .box-back div button {
+    margin-top: 30px;
+}
+.box-back div h3 {
+    font-weight: 400;
+    font-size: 26px;
+    margin-top: 0;
+}
+.box-back button {
+    padding: 10px 40px;
+    border: 2px solid white;
+    background-color: transparent;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    color: white;
+    outline: none;
+    transition: all 300ms;
+}
+.box-back button:hover{
+    background-color: white;
+    color: #0F3460;
+}
+/**Form**/
+.container-login-register{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 380px;
+    position: relative;
+    top: -280px;
+    left: 10px;
+    transition: left 500ms cubic-bezier(0.175, 0.885, 0.320, 1.275);
+}
+.container-login-register form {
+    width: 100%;
+    padding: 80px 20px;
+    background-color: white;
+    position: absolute;
+    border-radius: 20px;
+}
+.container-login-register form h2{
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #0F3460;
+}
+.container-login-register form input {
+    width: 95%;
+    margin-top: 20px;
+    padding: 10px;
+    border: none;
+    font-size: 16px;
+    background: #f2f2f2;
+    outline: none;
+}
+#logo-login {
+    margin: 0;
+}
+#logo-register {
+    margin: 0;
+}
+.container-login-register form button {
+    padding: 10px 40px;
+    margin-top: 40px;
+    border: none;
+    font-size: 14px;
+    background: #0F3460;
+    color: white;
+    cursor: pointer;
+    outline: none;
+}
+.form-login{
+    opacity: 1;
+    display: block;
+}
+.form-register {
+    display: none;
+}
+
+/*Trabajando en el resposive design*/
+
+@media  screen and (max-width: 850px) {
+    main {
+        margin-top: 50px;
+    }
+    .box-back {
+        max-width: 350px;
+        height: 300px;
+        flex-direction: column;
+        margin: auto;
+    }
+    .box-back div {
+        margin: 0;
+        position: absolute;
+    }
+    /*Form*/
+    .container-login-register {
+        top: -10px;
+        left: -5px;
+        margin: auto;
+    }
+    .container-login-register form{
+        position: relative;
+    }
+}
